@@ -1,7 +1,7 @@
 {
     "name": "coral_rest",
     "version": "0.0",
-    "description": A RESTful API for my wonderful coral business",
+    "description": "A RESTful API for my wonderful coral business",
     "author": "Colin Mackey <colin@fishbrains.com",
     "repository": {
         "type": "git",
