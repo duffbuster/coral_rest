@@ -8,29 +8,38 @@
  *
  */
 
-var application_root = __dirname,
-    express = require('express'),
+var express = require('express'),
     path = require('path'),
     mongoose = require('mongoose');
 
-var app = express.createServer();
+var app = express();
 
 // Database
 
-mongoose.connect('mongodb://localhost/coral_database');
+var Schema = mongoose.Schema;
 
-// Config
-
-app.configure(function() {
-    app.use(express.bodyParser());
-    app.use(express.methodOverride());
-    app.use(app.router);
-    app.use(express.static(path.join(application_root, "public")));
-    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+var Coral = new Schema({
+    title: String,
+    description: { type: String, default: null },
+    modified: { type: Date, default: Date.now }
 });
 
-app.get('/api', function (req, res) {
-    res.send('Coral API is running');
+var coralModel = mongoose.model('Coral', Coral);
+
+mongoose.connect('mongodb://localhost/coral_database');
+
+// App
+
+app.use(express.static('public'));
+
+// List corals
+app.get('/corals', function (req, res) {
+    return coralModel.find(function (err, corals) {
+        if (!err)
+            return res.send(corals);
+        else
+            return res.send(err);
+    })
 });
 
 // Launch Server
