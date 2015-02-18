@@ -8,9 +8,6 @@
  *
  */
 
-
-
-
 var application_root = __dirname,
     express = require("express"),
     path = require("path"),
