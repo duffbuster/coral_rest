@@ -10,7 +10,8 @@
     "bugs": "https://github.com/duffbuster/coral_rest/issues",
     "dependencies": {
         "express": "4.11.x",
-        "mongoose": "3.8.x"
+        "mongoose": "3.8.x",
+        "path": "0.11.x"
     },
     "licence": "MIT"
 }
