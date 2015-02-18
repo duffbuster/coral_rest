@@ -16,7 +16,6 @@ var express = require('express'),
 var app = express();
 
 // Database
-
 var Schema = mongoose.Schema;
 
 var Coral = new Schema({
@@ -30,7 +29,6 @@ var coralModel = mongoose.model('Coral', Coral);
 mongoose.connect('mongodb://localhost/coral_database');
 
 // App
-
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
