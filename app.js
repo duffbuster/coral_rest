@@ -1,7 +1,7 @@
 /*
  * Author: Colin Mackey
  * Name: CoralStore API
- * Version: 0.0.1
+ * Version: 0.1.0
  * 
  * Special thanks to http://pixelhandler.com/posts/develop-a-restful-api-using-nodejs-with-express-and-mongoose
  *   for guidance
