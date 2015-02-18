@@ -1,0 +1,16 @@
+{
+    "name": "coral_rest",
+    "version": "0.0",
+    "description": A RESTful API for my wonderful coral business",
+    "author": "Colin Mackey <colin@fishbrains.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/duffbuster/coral_rest"
+    },
+    "bugs": "https://github.com/duffbuster/coral_rest/issues",
+    "dependencies": {
+        "express": "4.11.x",
+        "mongoose": "3.8.x"
+    },
+    "licence": "MIT"
+}
